@@ -19,7 +19,7 @@ This is a CNN project predict whether an image holds a dog or a cat
 * Data selected is a subset of full kaggle dataset, and number of epochs is lowered due to personal computing power. Ideally, we would use higher epoch count for higher accuracy.
 
 ### Results and Optimization:
-When our model was ran without optimization, we achieved the following:
+When our model on a few epochs, the following was achieved:
 ![Alt text](output_graphs/default_model.png?raw=true "Non-optimized Output")
 
 While the accuracy continues to increase, validation accuracy begins to plateau. This suggests our data is over-fitted.
@@ -36,14 +36,14 @@ While the accuracy continues to increase, validation accuracy begins to plateau.
     Allowing us to achieve the following:        
 ![Alt text](output_graphs/augmented_model.png?raw=true "Augmented Output")
 
-    It is shown that validation accuracy now climbs together with accuracy. However, by the cut off at the 10th epoch, the accuracy is still not very high. We can hypothesis the accuracy will continue to grow if epoch count is increased.
-
-2) Increasing Epoch Count:
-
-    Both our above models only use 10 epoch due to my own personal computing power at the moment, but can be increased in order to allow our accuracy to continue growing
+    It is shown that validation accuracy now climbs together with accuracy.
     
-3) Transfer learning (VGG16):
+2) Transfer learning (VGG16):
 
-    VGG16 is a convolutional model holding different animal species. As we use dogs and cats in our own model, we may utilize this pre-built model as they share data and features.
-    Since training this model is very time-consuming, this output will be updated at a later time.
+    [VGG16](https://keras.io/api/applications/vgg/#vgg16-function) is a convolutional model holding different animal species. As we use dogs and cats in our own model, we may utilize this pre-built model as they share data and features.
+    ![Alt text](output_graphs/VGG16_model.png?raw=true "Transfer Learning Output")
+    
+    Utilizing this pre-built model which was trained on much higher amounts of data, an accuracy result of 98.3% was achieved with only 30 epochs.
+
+    
     
