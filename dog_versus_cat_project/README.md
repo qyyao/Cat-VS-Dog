@@ -41,6 +41,7 @@ While the accuracy continues to increase, validation accuracy begins to plateau.
 2) Transfer learning (VGG16):
 
     [VGG16](https://keras.io/api/applications/vgg/#vgg16-function) is a convolutional model holding different animal species. As we use dogs and cats in our own model, we may utilize this pre-built model as they share data and features.
+    
     ![Alt text](output_graphs/VGG16_model.png?raw=true "Transfer Learning Output")
     
     Utilizing this pre-built model which was trained on much higher amounts of data, an accuracy result of 98.3% was achieved with only 30 epochs.
